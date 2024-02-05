@@ -15,7 +15,7 @@ export const Skills = () => {
               </h3>
             </div>
 
-            {params.skills.soft_skills.map((skill, i) => (
+            {params.skills.soft_skills.map((skill:any, i:any) => (
               <p className="inline-block">
                 {i > 0 && (
                   <span className="mx-1">•</span>  
@@ -34,12 +34,12 @@ export const Skills = () => {
               </h3>
             </div>
 
-            {params.skills.technical_skills.map((skill) => (
+            {params.skills.technical_skills.map((skill:any) => (
                 <div>
                   <h4 className="inline-block">
                     <span style={{marginRight: "10px", textDecoration: "underline"}} >{skill.category}: </span>
                   </h4>              
-                  {skill.skills_list.map((skillName, i) => (
+                  {skill.skills_list.map((skillName:any, i:any) => (
                     <p className="inline-block">
                       {i > 0 && (
                         <span className="mr-1">,</span>  

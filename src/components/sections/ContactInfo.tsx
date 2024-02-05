@@ -24,13 +24,6 @@ export const ContactInfo = () => {
           <a href={params.contact.linkedin_url}>{cleanLink(params.contact.linkedin_url)}</a>
         </>
       )}
-
-      {params.contact.website && (
-        <>
-          <span className="mx-1">•</span>
-          <a href={config.contactInfo.secondLink}>{cleanLink(config.contactInfo.secondLink)}</a>
-        </>
-      )}
     </div>
   );
 };

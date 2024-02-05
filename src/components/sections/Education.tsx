@@ -8,7 +8,7 @@ export const Education = () => {
   return (
     <SectionWrapper title="Education">
       <ul className="ml-2">
-        {params.education.map((education, i) => (
+        {params.education.map((education: any, i: any) => (
           <li key={education.university} className={i % 2 ? `mt-1` : `mt-half`}>
             <div className="flex">
               <h3>

@@ -7,7 +7,7 @@ export const WorkExperience = () => {
   return (
     <SectionWrapper title="Work Experience">
       <ul className="ml-2">
-        {params.work_experience.map((workExperience, i) => (
+        {params.work_experience.map((workExperience:any, i:any) => (
           <li key={workExperience.company} className={i % 2 ? `mt-1` : `mt-half`}>
             <div className="flex">
               <h3>
@@ -17,7 +17,7 @@ export const WorkExperience = () => {
             </div>
             <h4>{workExperience.role}</h4>
             <ul className="ml-3">
-              {workExperience.description.map((bulletPoint) => (
+              {workExperience.description.map((bulletPoint:any) => (
                 <li key={bulletPoint}>{bulletPoint}</li>
               ))}
             </ul>

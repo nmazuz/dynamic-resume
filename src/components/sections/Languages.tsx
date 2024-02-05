@@ -8,8 +8,8 @@ export const Languages = () => {
   console.log(params.languages);
   return (
       <SectionWrapper title="Languages">
-        {params.languages.map((item, index) => {
-          const [key, value] = Object.entries(item)[0];
+        {params.languages.map((item: any, index: any) => {
+          const [key, value] = Object.entries(item)[0] as [string, string];
           return (
             <div key={index} className="inline-block mr-1">
               <h4 className="inline-block">
