@@ -6,7 +6,7 @@ export const Education = () => {
   const params = useRequestParams();
 
   return (
-    <SectionWrapper title="Education">
+    <SectionWrapper title="Education" show={params.education.length > 0 ? true : false}>
       <ul className="ml-2">
         {params.education.map((education: any, i: any) => (
           <li key={education.university} className={i % 2 ? `mt-1` : `mt-half`}>

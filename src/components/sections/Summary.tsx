@@ -5,7 +5,7 @@ export const Summary = () => {
   const params = useRequestParams();
 
   return (
-    <SectionWrapper title="Summary">
+    <SectionWrapper title="Summary" show={params.summery != "" ? true : false}>
       <p>{params.summary}</p>
     </SectionWrapper>
   );

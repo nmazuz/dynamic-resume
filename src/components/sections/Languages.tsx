@@ -7,7 +7,7 @@ export const Languages = () => {
 
   console.log(params.languages);
   return (
-      <SectionWrapper title="Languages">
+      <SectionWrapper title="Languages" show={params.languages.length > 0 ? true : false}>
         {params.languages.map((item: any, index: any) => {
           const [key, value] = Object.entries(item)[0] as [string, string];
           return (

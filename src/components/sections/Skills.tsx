@@ -5,9 +5,9 @@ export const Skills = () => {
   const params = useRequestParams();
 
   return (
-    <SectionWrapper title="Skills">
+    <SectionWrapper title="Skills" show={params.skills ? true : false}>
       <ul className="ml-2">
-        {params.skills.soft_skills && (
+        {params.skills.soft_skills && params.skills.soft_skills.length > 0 && (
            <li key="softskills">
             <div style={{marginTop: "10px"}}>
               <h3 className="inline-block">
@@ -26,7 +26,7 @@ export const Skills = () => {
           </li>
         )}
 
-        {params.skills.technical_skills && (
+        {params.skills.technical_skills && params.skills.technical_skills.length > 0 && (
           <li key="techkills">
             <div style={{marginTop: "10px"}}>
               <h3 className="inline-block">

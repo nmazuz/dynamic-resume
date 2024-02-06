@@ -4,8 +4,6 @@ import { useRequestParams } from '../../hooks';
 export const ContactInfo = () => {
   const params = useRequestParams();
 
-  console.log("params: ",params)
-
   const cleanLink = useCallback((link: string) => {
     return link.replace(/^https?:\/\//, '').replace(/^www\./, '');
   }, []);
