@@ -4,7 +4,7 @@ import { SectionWrapper } from '../shared';
 
 export const Education = () => {
   const params = useRequestParams();
-  console.log(params);
+  //console.log(params);
 
   return (
     <SectionWrapper title="Education" show={params.education.length > 0 ? true : false}>

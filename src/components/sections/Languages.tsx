@@ -5,7 +5,7 @@ import { SectionWrapper } from '../shared/SectionWrapper';
 export const Languages = () => {
   const params = useRequestParams();
 
-  console.log(params.languages);
+  //console.log(params.languages);
   return (
       <SectionWrapper title="Languages" show={params.languages.length > 0 ? true : false}>
         {params.languages.map((item: any, index: any) => {
