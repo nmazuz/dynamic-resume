@@ -4,6 +4,8 @@ import { SectionWrapper } from '../shared';
 export const Skills = () => {
   const params = useRequestParams();
 
+  console.log(params.skills);
+
   return (
     <SectionWrapper title="Skills" show={params.skills ? true : false}>
       <ul className="ml-2">
