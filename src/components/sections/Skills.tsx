@@ -36,20 +36,32 @@ export const Skills = () => {
               </h3>
             </div>
 
-            {params.skills.technical_skills.map((skill:any) => (
-                <div>
-                  <h4 className="inline-block">
-                    <span style={{marginRight: "10px", textDecoration: "underline"}} >{skill.category}: </span>
-                  </h4>              
-                  {skill.skills_list.map((skillName:any, i:any) => (
+            {params.skills.technical_skills.map((skill:any, i:any) => (
+                <>
+                  { typeof skill === 'string' && (
                     <p className="inline-block">
                       {i > 0 && (
-                        <span className="mr-1">,</span>  
+                        <span className="mx-1">•</span>  
                       )}
-                      <span>{skillName}</span>
+                      <span>{skill}</span>
                     </p>
-                  ))}
-                </div>
+                  )}
+                  { skill.category && skill.skills_list && (
+                    <div>
+                      <h4 className="inline-block">
+                        <span style={{marginRight: "10px", textDecoration: "underline"}} >{skill.category}: </span>
+                      </h4>   
+                      {skill.skills_list.map((skillName:any, i:any) => (
+                        <p className="inline-block">
+                          {i > 0 && (
+                            <span className="mr-1">,</span>  
+                          )}
+                          <span>{skillName}</span>
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </>
             ))}
           </li>
         )}
